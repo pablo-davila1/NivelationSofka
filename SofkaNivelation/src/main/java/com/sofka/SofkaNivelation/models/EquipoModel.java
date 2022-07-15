@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
 
-@Document(collation = "teams")
+@Document(collection = "teams")
 public class EquipoModel {
     @Id
     private String id;

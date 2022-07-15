@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collation = "cyclist")
+@Document(collection = "cyclist")
 public class CiclistaModel {
     @Id
     private String id;

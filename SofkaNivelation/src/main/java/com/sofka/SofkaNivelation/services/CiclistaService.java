@@ -21,6 +21,19 @@ public class CiclistaService {
     @Autowired
     private CyclistTeamRepository cyclistTeamRepository;
 
+    public CiclistaInterface deleteById (String id){
+        CiclistaInterface ciclistaInterface = new CiclistaInterface();
+
+        if(!cyclistRepository.findById(id).isEmpty()){
+            cyclistRepository.deleteById(id);
+            ciclistaInterface.setRespuesta("Ciclista eliminado correctamente");
+            return ciclistaInterface;
+        }
+        ciclistaInterface.setRespuesta("Ciclista inexistente");
+        return ciclistaInterface;
+
+    }
+
     public CiclistaInterface saveCiclista (CiclistaModel ciclistaModel){
         CiclistaInterface ciclistaInterface = new CiclistaInterface();
 
@@ -57,17 +70,14 @@ public class CiclistaService {
 
     }
 
-    public CiclistasInterfaz getAllById(){
+    public CiclistasInterfaz getAll(){
         CiclistasInterfaz ciclistasInterfaz = new CiclistasInterfaz();
 
         ArrayList<CiclistaModel> ciclistaModels = (ArrayList<CiclistaModel>) cyclistRepository.findAll();
         ciclistasInterfaz.setCiclistaModels(ciclistaModels);
         ciclistasInterfaz.setRespuesta("Operacion exitosa");
         return ciclistasInterfaz;
-
-
     }
-
 
     
 }
