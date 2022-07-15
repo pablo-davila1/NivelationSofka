@@ -18,23 +18,6 @@ public class EquipoModel {
     private String country;
     private ArrayList<CiclistaModel> cyclists;
 
-    public EquipoModel(){}
-
-    public EquipoModel(String id, String teamId, String name, String country, ArrayList<CiclistaModel> cyclists) {
-        this.id = id;
-        this.teamId = teamId;
-        this.name = name;
-        this.country = country;
-        this.cyclists = cyclists;
-    }
-
-    public EquipoModel(String teamId, String name, String country, ArrayList<CiclistaModel> cyclists) {
-        this.teamId = teamId;
-        this.name = name;
-        this.country = country;
-        this.cyclists = cyclists;
-    }
-
     public String getId() {
         return id;
     }

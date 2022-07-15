@@ -16,22 +16,6 @@ public class CiclistaModel {
     private String name;
     private String country;
 
-    public CiclistaModel(){}
-
-    public CiclistaModel(String id, String cyclistId, String teamCode, String name, String country) {
-        this.id = id;
-        this.cyclistId = cyclistId;
-        this.teamCode = teamCode;
-        this.name = name;
-        this.country = country;
-    }
-
-    public CiclistaModel(String cyclistId, String teamCode, String name, String country) {
-        this.cyclistId = cyclistId;
-        this.teamCode = teamCode;
-        this.name = name;
-        this.country = country;
-    }
 
     public String getId() {
         return id;
